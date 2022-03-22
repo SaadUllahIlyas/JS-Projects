@@ -1,0 +1,142 @@
+
+            html,body{
+                height: 100%;
+                padding: 0%;
+                margin: 0%;
+            }
+            #container{
+                display: flex;
+                width: 75%;
+                height: 75%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            #game{
+                display: flex;
+                justify-content: center;
+                box-shadow: 0px 0px 0px 4px #BB86fc;
+                /*transform: translate(-0%, -50%);*/
+                width: 900px;
+                max-width: 900px;
+                cursor: crosshair;
+                touch-action: none;
+                background-color: #1d1d1f;
+                float: left;
+            }    
+            #toolbar{
+                /*transform: translateY(-50%);*/
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: 20px;
+                padding: 0%;
+                max-width: 64px;
+                float: left;
+                }
+            #toolbar .item{
+                float: left;
+                line-height: 32px;
+                padding: 15px;
+                border: 1px solid #BB86fc;
+                cursor: pointer;
+                height: 32px;
+                width: 32px;
+                font-family: Arial, FontAwesome;
+                font-size: 24px;
+                color: #CF6679;
+                text-align: center;
+                vertical-align: bottom;
+            }
+
+            #selection{
+                float: left;
+                padding: 3px;
+                border: 1px solid #BB86fc;
+                cursor: pointer;
+                height: 64px;
+                width: 64px;
+                background: none;
+                font-family: Arial, FontAwesome;
+                font-size: 20px;
+                color: #CF6679;
+            }
+
+            #selection option{
+                background-color: #1d1d1f;
+                padding: 20px;
+            }
+
+            #colorbar{
+                float: right;
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 20px;
+                /*transform: translateY(-50%);*/
+                padding: 0%;
+                max-width: 100px;
+                overflow: hidden;
+                float: left;
+            }
+
+            #colorbar .color{
+                float: left;
+                line-height: 32px;
+                padding: 15px;
+                border: 1px solid #BB86fc;
+                cursor: pointer;
+                height: 16px;
+                width: 16px;
+            }
+            
+            #coloritem{
+                float: left;
+                line-height: 16px;
+                /*padding: 15px;*/
+                padding: 0px;
+                border: 1px solid #BB86fc;
+                cursor: pointer;
+                height: 46px;
+                width: 46px;
+                background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+            }
+
+            #coloritem input{
+                border: none;
+                background: none;
+                width: 47px;
+                padding: 100%;
+                float: left;
+            }
+
+            #coloritem i{
+                width: 240px;
+                height: 240px;
+                color: red;
+                float: left;
+                font-family: Arial, FontAwesome;
+                font-size: 24px;
+            }
+
+
+
+            @media only screen and (max-width: 600px) {
+                #toolbar{
+                margin-top: 100px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 256px;
+                height: 64px;
+                }
+                #game{
+                position: absolute;
+                margin-left: 0px;
+                margin-bottom: 80px;
+                width: 100%;            
+            }
+                }
+

@@ -1,0 +1,66 @@
+<!-- Fahad Ikhlas  +923042316741 -->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark">
+        <title>LED-Matrix</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a10ccb6ec5.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body onload="initialise()">
+        <div id="container">
+            <div id="toolbar">
+                <span class="item" id="pencil" onclick="changeTool('0')">
+                    <i class="fas fa-pencil-alt"></i>
+                </span>
+                <span class="item" id="eraser" onclick="changeTool('1')">
+                    <i class="fas fa-eraser"></i>
+                </span>
+                <span class="item" id="fill" onclick="changeTool('2')">
+                    <i class="fas fa-fill-drip"></i>
+                </span>
+                <span class="item" id="delete" onclick="clearCanvas()">
+                    <i class="fas fa-trash"></i>
+                </span>
+                <span class="item" id="save" onclick="save()">
+                    <i class="fas fa-save"></i>
+                </span>
+                <span class="item" id="live" onclick="changeMode()">
+                    <i class="fas fa-wifi"></i>
+                </span>
+                <span class="item" id="reset" onclick="refresh()">
+                    <i class="fas fa-play"></i>
+                </span>
+                    <select name="stored Patterns" id="selection" title="load a saved pattern" onchange="loadPattern()">
+                        <option selected disabled hidden style='display: none' value='-1'></option>
+                    </select>
+                <span class="item" id="live" title="Delete a saved pattern" onclick="deletePattern()">
+                    <i class="fas fa-folder-minus"></i>
+                </span>
+            </div>
+            <canvas id="game" width="900" height="900"></canvas>
+            <div id="colorbar">
+                <span class="color" style="background-color: #FF0000;" onclick="changeColor('#FF0000')"></span>
+                <span class="color" style="background-color: #00FF00;" onclick="changeColor('#00FF00')"></span>
+                <span class="color" style="background-color: #0000FF;" onclick="changeColor('#0000FF')"></span>
+                <span class="color" style="background-color: #FFAA00;" onclick="changeColor('#FFAA00')"></span>
+                <span class="color" style="background-color: #00AAFF;" onclick="changeColor('#00AAFF')"></span>
+                <span class="color" style="background-color: #AA00FF;" onclick="changeColor('#AA00FF')"></span>
+                <span class="color" style="background-color: #FFFFFF;" onclick="changeColor('#FFFFFF')"></span>
+                <span class="color" style="background-color: #000000;" onclick="changeColor('#000000')"></span>
+                <span class="color" style="background-color: #000000;" id="pickedColor" onclick="changeColor(pickedColor)"></span>
+                <span id="coloritem"><input type="color" id="colorpicker"><i class="fas fa-trash"><input type="color"></i></span>
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+        
+        <script src="canvas.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>
